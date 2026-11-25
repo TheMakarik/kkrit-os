@@ -64,7 +64,7 @@ modules:
   - type: os-release
     properties:
       NAME: "ККРИТ-ОС"
-      PRETTY_NAME: "ККРИТ-ОС 2026 Стандартное издание"
+      PRETTY_NAME: "ККРИТ-ОС 2026"
       VERSION: 2026
       ID_LIKE: fedora
       LOGO: kkrit-logo
