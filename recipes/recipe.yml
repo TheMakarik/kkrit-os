@@ -19,7 +19,13 @@ modules:
 
   - type: dnf
     repos:
+      # Fedora (base, updates) и updates-testing в базовом образе уже настроены,
+      # дополнительно подключаем стандартные сторонние репозитории.
+      # RPM Fusion: free + nonfree (кодеки, драйверы, проприетарные пакеты)
+      nonfree: rpmfusion
       copr:
+        # стандартные COPR для uBlue-образов
+        - ublue-os/packages
         - atim/starship
     install:
       packages:
