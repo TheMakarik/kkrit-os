@@ -22,7 +22,7 @@ modules:
 
         - ublue-os/packages
         - atim/starship
-      # AliveColors (AKVIS): вендорский репозиторий и ключ подписи
+
       files:
         - https://akvis.com/akvis.ru.repo
       keys:
@@ -56,6 +56,7 @@ modules:
           - org.onlyoffice.desktopeditors
     
           - ru.yandex.Browser
+          - com.vscodium.codium
       - scope: user 
 
   # Брендинг системы: имя и логотип (иконка kkrit-logo из hicolor)
