@@ -5,12 +5,10 @@ name: template
 # description will be included in the image's metadata
 description: This is my personal OS image.
 
-# the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: latest # You can pin to a specific version of Fedora as well
+image-version: latest 
 
-# module configuration, executed in order
-# you can include multiple instances of the same module
+
 modules:
   - type: files
     files:
@@ -19,24 +17,20 @@ modules:
 
   - type: dnf
     repos:
-      # Fedora (base, updates) и updates-testing в базовом образе уже настроены,
-      # дополнительно подключаем стандартные сторонние репозитории.
-      # RPM Fusion: free + nonfree (кодеки, драйверы, проприетарные пакеты)
       nonfree: rpmfusion
       copr:
-        # стандартные COPR для uBlue-образов
+    
         - ublue-os/packages
         - atim/starship
     install:
       packages:
         - micro
         - starship
+        - fastfetch
     remove:
       packages:
-        # example: removing firefox (in favor of the flatpak)
-        # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - firefox-langpacks 
 
   - type: default-flatpaks
     configurations:
@@ -44,9 +38,14 @@ modules:
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
-          - org.mozilla.firefox
-          - org.gnome.Loupe
+          - com.visualstudio.code
       - scope: user # Also add Flathub user repo, but no user packages
+
+  # Системные override-ы Flatpak (VS Code: доступ ко всей файловой системе)
+  - type: systemd
+    system:
+      enabled:
+        - kkrit-flatpak-overrides.service
 
   # Брендинг системы: имя и логотип (иконка kkrit-logo из hicolor)
   - type: os-release
