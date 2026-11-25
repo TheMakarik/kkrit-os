@@ -22,14 +22,14 @@ sudo podman run --rm --privileged --platform linux/amd64 \
   --volume "$IMG_DIR:/img_src/" \
   --volume "$REPO_DIR:/build-container-installer/build" \
   --volume dnf-cache:/cache/dnf/ \
-  --env VARIANT=Kinoite \
-  --env ISO_NAME="build/$ISO_NAME" \
-  --env DNF_CACHE=/cache/dnf \
-  --env SECURE_BOOT_KEY_URL=https://github.com/ublue-os/bazzite/raw/main/secure_boot.der \
-  --env ENROLLMENT_PASSWORD=universalblue \
-  --env WEB_UI=false \
-  --env "IMAGE_SRC=oci-archive:/img_src/$(basename "$ARCHIVE")" \
-  --env "VERSION=$VERSION" \
-  ghcr.io/jasonn3/build-container-installer:v1.5.0
+  ghcr.io/jasonn3/build-container-installer:v1.5.0 \
+  VARIANT=Kinoite \
+  ISO_NAME="build/$ISO_NAME" \
+  DNF_CACHE=/cache/dnf \
+  SECURE_BOOT_KEY_URL=https://github.com/ublue-os/bazzite/raw/main/secure_boot.der \
+  ENROLLMENT_PASSWORD=universalblue \
+  WEB_UI=false \
+  "IMAGE_SRC=oci-archive:/img_src/$(basename "$ARCHIVE")" \
+  "VERSION=$VERSION"
 
 echo "ISO: $REPO_DIR/$ISO_NAME"
