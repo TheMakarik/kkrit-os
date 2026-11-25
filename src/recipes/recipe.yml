@@ -19,9 +19,14 @@ modules:
     repos:
       nonfree: rpmfusion
       copr:
-    
+
         - ublue-os/packages
         - atim/starship
+      # AliveColors (AKVIS): вендорский репозиторий и ключ подписи
+      files:
+        - https://akvis.com/akvis.ru.repo
+      keys:
+        - https://akvis.com/akvis.asc
     install:
       packages:
         - micro
@@ -31,6 +36,8 @@ modules:
         - gimp
         - krita
         - inkscape
+        # AliveColors (аналог Photoshop / Illustrator, репозиторий AKVIS)
+        - alivecolors
         # Видео и анимация: аналоги Premiere Pro / After Effects / Animate
         - kdenlive
         - opentoonz
