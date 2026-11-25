@@ -27,6 +27,22 @@ modules:
         - micro
         - starship
         - fastfetch
+        # Графика: аналоги Photoshop / Illustrator
+        - gimp
+        - krita
+        - inkscape
+        # Видео и анимация: аналоги Premiere Pro / After Effects / Animate
+        - kdenlive
+        - opentoonz
+        # Звук: аналог Audition
+        - audacity
+        # Офис: аналоги Word / Excel / PowerPoint
+        - libreoffice-writer
+        - libreoffice-calc
+        - libreoffice-impress
+        - libreoffice-draw
+        - libreoffice-langpack-ru
+        - distrobox
     remove:
       packages:
         - firefox
@@ -37,7 +53,13 @@ modules:
       - notify: true # Send notification after install/uninstall is finished (true/false)
         scope: system
         # If no repo information is specified, Flathub will be used by default
-        install: [] # пока пусто
+        install: # system flatpaks we want all users to have and not remove
+          # Аналог After Effects (нет в репозиториях Fedora)
+          - fr.natron.Natron
+          # Аналоги Word / Excel / PowerPoint
+          - org.onlyoffice.desktopeditors
+          # Аналог Google Chrome
+          - ru.yandex.Browser
       - scope: user # Also add Flathub user repo, but no user packages
 
   # Брендинг системы: имя и логотип (иконка kkrit-logo из hicolor)
