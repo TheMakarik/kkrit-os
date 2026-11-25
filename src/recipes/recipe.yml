@@ -65,7 +65,7 @@ modules:
     properties:
       NAME: "ККРИТ-ОС"
       PRETTY_NAME: "ККРИТ-ОС 2026"
-      VERSION: 2026
+      VERSION: "2026"
       ID_LIKE: fedora
       LOGO: kkrit-logo
       DEFAULT_HOSTNAME: kkrit-os
