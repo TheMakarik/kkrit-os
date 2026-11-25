@@ -68,5 +68,14 @@ modules:
       VERSION: 2026
       ID_LIKE: fedora
       LOGO: kkrit-logo
+      DEFAULT_HOSTNAME: kkrit-os
+      HOME_URL: https://github.com/TheMakarik/kkrit-os
+      DOCUMENTATION_URL: https://github.com/TheMakarik/kkrit-os
+      SUPPORT_URL: https://github.com/TheMakarik/kkrit-os/issues
+      BUG_REPORT_URL: https://github.com/TheMakarik/kkrit-os/issues
+      REDHAT_BUGZILLA_PRODUCT: "ККРИТ-ОС"
+      REDHAT_BUGZILLA_PRODUCT_VERSION: "2026"
+      REDHAT_SUPPORT_PRODUCT: "ККРИТ-ОС"
+      REDHAT_SUPPORT_PRODUCT_VERSION: "2026"
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
