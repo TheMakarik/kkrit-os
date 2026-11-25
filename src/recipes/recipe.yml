@@ -63,8 +63,8 @@ modules:
   # Брендинг системы: имя и логотип (иконка kkrit-logo из hicolor)
   - type: os-release
     properties:
-      NAME: KKRIT OS
-      PRETTY_NAME: KKRIT OS 2026
+      NAME: "ККРИТ-ОС"
+      PRETTY_NAME: "ККРИТ-ОС 2026 Стандартное издание"
       VERSION: 2026
       ID_LIKE: fedora
       LOGO: kkrit-logo
