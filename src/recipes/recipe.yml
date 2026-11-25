@@ -29,10 +29,6 @@ modules:
         - ublue-os/packages
         - atim/starship
 
-      files:
-        - https://akvis.com/akvis.ru.repo
-      keys:
-        - https://akvis.com/akvis.asc
     install:
       packages:
         - micro
@@ -41,7 +37,6 @@ modules:
         - gimp
         - krita
         - inkscape
-        - alivecolors
         - kdenlive
         - libreoffice-writer
         - libreoffice-calc
