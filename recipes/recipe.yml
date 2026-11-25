@@ -37,15 +37,8 @@ modules:
       - notify: true # Send notification after install/uninstall is finished (true/false)
         scope: system
         # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks we want all users to have and not remove
-          - com.visualstudio.code
+        install: [] # пока пусто
       - scope: user # Also add Flathub user repo, but no user packages
-
-  # Системные override-ы Flatpak (VS Code: доступ ко всей файловой системе)
-  - type: systemd
-    system:
-      enabled:
-        - kkrit-flatpak-overrides.service
 
   # Брендинг системы: имя и логотип (иконка kkrit-logo из hicolor)
   - type: os-release
